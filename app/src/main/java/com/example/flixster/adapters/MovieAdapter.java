@@ -72,6 +72,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
         TextView tvTitle;
         TextView tvOverview;
         ImageView ivPoster;
+        ImageView youtubeIcon;
 
         RelativeLayout container;
 
@@ -81,6 +82,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
             tvTitle = itemView.findViewById(R.id.tvTitle);
             tvOverview = itemView.findViewById(R.id.tvOverview);
             ivPoster = itemView.findViewById(R.id.ivPoster);
+            youtubeIcon = itemView.findViewById(R.id.youtubeIcon);
             container = itemView.findViewById(R.id.container);
         }
 
@@ -95,6 +97,10 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
             }else{
                 // else imageUrl = poster image
                 imageUrl = movie.getPosterPath();
+            }
+
+            if (movie.getRating() >= 5){
+                youtubeIcon.setVisibility(View.VISIBLE);
             }
 
             RequestOptions requestOptions = new RequestOptions();
