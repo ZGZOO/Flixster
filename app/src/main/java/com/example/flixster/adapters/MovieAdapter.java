@@ -19,6 +19,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.CenterCrop;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.flixster.DetailActivity;
 import com.example.flixster.R;
 import com.example.flixster.models.Movie;
@@ -93,8 +96,12 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
                 // else imageUrl = poster image
                 imageUrl = movie.getPosterPath();
             }
+
+            RequestOptions requestOptions = new RequestOptions();
+            requestOptions = requestOptions.transform(new CenterCrop(), new RoundedCorners(16));
             Glide.with(context)
                     .load(imageUrl)
+                    .apply(requestOptions)
                     .placeholder(R.drawable.ic_launcher_foreground)
                     .into(ivPoster);
 
