@@ -62,7 +62,6 @@ public class DetailActivity extends YouTubeBaseActivity {
                     Log.e("DetailActivity", "Failed to parse JSON", e);
                     e.printStackTrace();
                 }
-
             }
 
             @Override
@@ -87,6 +86,5 @@ public class DetailActivity extends YouTubeBaseActivity {
                 Log.d("DetailActivity", "onInitializationFailure");
             }
         });
-
     }
 }
