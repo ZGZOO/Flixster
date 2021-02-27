@@ -26,7 +26,7 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 
 - Bonus: 
   - Auto trailers for movies over 5 stars
-  <img src="https://res.cloudinary.com/headincloud/image/upload/v1614410317/flixster_part2_autotrailer_gif_pgsyqj.gif" width=250><br>
+  <img src="https://res.cloudinary.com/headincloud/image/upload/v1614410508/flixster_part2_autotrailer_gif_wwr6rn.gif" width=250><br>
    
   - Youtube icon overlay for movies over 5 stars
   <img src="https://res.cloudinary.com/headincloud/image/upload/v1614409451/Flixster_youtube_icon_okg5gm.png" width=250><br>
